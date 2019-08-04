@@ -3,9 +3,16 @@
 // colors
 $bgd-color: lightgrey;
 
+// layout
+$header-height: 56px;
+
 
 body {
   background: $bgd-color !important;
+  margin-top: $header-height + 20px !important;
+}
+
+
 .clearfix {
   list-style: none;
 }
