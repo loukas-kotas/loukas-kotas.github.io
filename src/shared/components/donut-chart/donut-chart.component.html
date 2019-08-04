@@ -1,1 +1,31 @@
-<p>donut-chart works!</p>
+<!-- solution based at: https://codepen.io/cklloyd/pen/QKLroV -->
+<!--
+Based on Lea Verou's svg pie chart:
+https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/
+-->
+
+<!-- SOLUTION 1 -->
+<div id="title-{{id}}" class="donut-title">
+  <h2>{{title}}</h2>
+</div>
+<div id="{{id}}" class="donut-chart">
+  <svg viewBox="0 0 32 32">
+    <circle r="16" cx="16" cy="16" />
+  </svg>
+  <div class="donut-center">
+
+  </div>
+</div>
+
+
+<!-- SOLUTION 2 -->
+<!-- source: https://codepen.io/seanstopnik/pen/Abyhj -->
+<!-- <div class="card">
+    <div class="donut-chart chart4">
+      <div class="slice one"></div>
+      <div class="slice two"></div>
+      <div class="chart-center">
+        <span></span>
+      </div>
+    </div>
+  </div> -->
