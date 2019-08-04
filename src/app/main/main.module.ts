@@ -4,6 +4,7 @@ import { MainComponent } from './main.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HeaderModule } from '../header/header.module';
 import { PersonProfileModule } from '../person-profile/person-profile.module';
+import { AboutModule } from '../about/about.module';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
     CommonModule,
     HeaderModule,
     PersonProfileModule,
+    AboutModule,
     RouterModule.forChild(routes)
   ],
   exports: [
