@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeaderModule } from '../header/header.module';
 import { PersonProfileModule } from '../person-profile/person-profile.module';
 import { AboutModule } from '../about/about.module';
+import { SkillsModule } from '../skills/skills.module';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
     HeaderModule,
     PersonProfileModule,
     AboutModule,
+    SkillsModule,
     RouterModule.forChild(routes)
   ],
   exports: [
