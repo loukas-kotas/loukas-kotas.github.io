@@ -8,6 +8,9 @@ import { DonutChartComponent } from './donut-chart.component';
   declarations: [DonutChartComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    DonutChartComponent
   ]
 })
 export class DonutChartModule { }
