@@ -1,1 +1,32 @@
-<p>skills works!</p>
+<section id="skills">
+  <div class="card card--spacing">
+    <div class="card-title">
+      <h3>Skills</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <app-donut-chart [id]="'angular'" [value]="90" [title]="'Angular'" [circleColor]="'red'"></app-donut-chart>
+        </div>
+        <div class="col">
+          <app-donut-chart [id]="'typescript'" [value]="90" [title]="'Typescript'" [circleColor]="'#007acc'"></app-donut-chart>
+        </div>
+        <div class="col">
+          <app-donut-chart [id]="'css'" [value]="80" [title]="'CSS'" [circleColor]="'#15D974'"></app-donut-chart>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-donut-chart [id]="'photoshop'" [value]="70" [title]="'Photoshop'"></app-donut-chart>
+        </div>
+        <div class="col">
+          <app-donut-chart [id]="'nodejs'" [value]="80" [title]="'Node'"></app-donut-chart>
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
