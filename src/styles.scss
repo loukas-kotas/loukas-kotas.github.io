@@ -7,6 +7,19 @@ $bgd-color: lightgrey;
 $header-height: 56px;
 
 
+.card--spacing {
+  margin: 5px 5px;
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 50px 40px 15px 40px;
+}
+
+
+
+
 body {
   background: $bgd-color !important;
   margin-top: $header-height + 20px !important;

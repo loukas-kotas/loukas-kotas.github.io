@@ -1,0 +1,43 @@
+.profile-image {
+  width: 300px;
+  height: 346px;
+  background: lightblue;
+}
+
+.profile-info {
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.profile-list {
+  padding: 3rem 0 0 0;
+}
+
+.profile-list  .title {
+  display: block;
+  width: 120px;
+  float: left;
+  color: #333333;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.profile-list  .cont {
+  display: block;
+  margin-left: 125px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #9da0a7;
+}
+
+.profile-list > li {
+  padding: 10px 0 0 0;
+}
