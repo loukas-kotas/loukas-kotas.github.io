@@ -8,6 +8,9 @@ import { PersonProfileComponent } from './person-profile.component';
   declarations: [PersonProfileComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    PersonProfileComponent
   ]
 })
 export class PersonProfileModule { }
