@@ -8,6 +8,9 @@ import { TimelineCardComponent } from './timeline-card.component';
   declarations: [TimelineCardComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    TimelineCardComponent
   ]
 })
 export class TimelineCardModule { }
