@@ -7,9 +7,17 @@
 // layout
 $header-height: 56px;
 
+.card-title {
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
 
 .card--spacing {
   margin: 5px 5px;
+}
+
+.card--no-border {
+  border: none !important;
 }
 
 .center {
@@ -18,7 +26,13 @@ $header-height: 56px;
   padding: 50px 40px 15px 40px;
 }
 
-
+.cont {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #9da0a7;
+}
 
 
 body {
@@ -26,6 +40,9 @@ body {
   margin-top: $header-height + 20px !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .clearfix {
   list-style: none;

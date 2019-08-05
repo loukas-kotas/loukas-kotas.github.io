@@ -6,6 +6,7 @@ import { HeaderModule } from '../header/header.module';
 import { PersonProfileModule } from '../person-profile/person-profile.module';
 import { AboutModule } from '../about/about.module';
 import { SkillsModule } from '../skills/skills.module';
+import { ExperienceModule } from '../experience/experience.module';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
     PersonProfileModule,
     AboutModule,
     SkillsModule,
+    ExperienceModule,
     RouterModule.forChild(routes)
   ],
   exports: [
