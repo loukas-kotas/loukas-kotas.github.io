@@ -13,10 +13,11 @@
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: $exp-timeline-card;
   position: relative;
   border-radius: 6px;
   border-top: 6px solid $shamrock;
+  box-shadow: 1px 1px 2px $exp-timeline-card-shadow;
 }
 
 /* The circles on the timeline */
@@ -26,7 +27,7 @@
   width: 25px;
   height: 25px;
   right: -12px;
-  background-color: white;
+  background-color: $exp-timeline-card;
   border: 4px solid $shamrock;
   top: 15px;
   border-radius: 50%;
@@ -51,7 +52,7 @@
   width: 25px;
   height: 25px;
   right: -12px;
-  background-color: white;
+  background-color: $exp-timeline-card;
   border: 4px solid $shamrock;
   top: 15px;
   border-radius: 50%;
@@ -77,9 +78,9 @@
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid white;
+  border: medium solid $exp-timeline-card-triangle;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent $exp-timeline-card-triangle;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -91,9 +92,9 @@
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
+  border: medium solid $exp-timeline-card-triangle;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent $exp-timeline-card-triangle transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -104,7 +105,7 @@
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: $exp-timeline-card;
   position: relative;
   border-radius: 6px;
 }
@@ -126,9 +127,9 @@
 /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
-    border: medium solid white;
+    border: medium solid $exp-timeline-card;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent $exp-timeline-card transparent transparent;
   }
 
 /* Make sure all circles are at the same spot */
