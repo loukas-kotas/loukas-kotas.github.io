@@ -7,9 +7,15 @@
 // layout
 $header-height: 56px;
 
+.card {
+  background: $card-bgd !important;
+}
+
 .card-title {
   text-align: center;
   padding: 1rem 0 0 0;
+  background: $card-title-bgd;
+  color: $card-title-color;
 }
 
 .card--spacing {
@@ -18,6 +24,10 @@ $header-height: 56px;
 
 .card--no-border {
   border: none !important;
+}
+
+.card--shadow {
+  box-shadow: 2px 2px 8px #000;
 }
 
 .center {
