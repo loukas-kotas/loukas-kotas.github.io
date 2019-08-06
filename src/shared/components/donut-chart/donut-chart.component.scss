@@ -31,7 +31,8 @@
   }
 }
 .donut-center{
-  background-color: var(--background-color);
+  // background-color: var(--background-color);
+  background-color: $donut-center-bgd;
   border-radius:50%;
   position:absolute;
   height:80%;
@@ -39,6 +40,17 @@
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
+}
+
+.donut-center::after {
+  display: inline-block;
+  width: 100%;
+  font-size: var(--center-text-size);
+  // color: black;
+  color: $donut-center-color;
+  text-align: center;
+  line-height: var(--percentage-size);
+  content: var(--skill-strength);
 }
 .ui{
   margin:20px 0;
