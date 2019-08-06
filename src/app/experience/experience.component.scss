@@ -1,7 +1,13 @@
 @import '../../shared/styles/colors';
 
+
+
 .card {
-  background: #474e5d;
+  // background: #474e5d;
+}
+
+.card-body {
+  background: $card-bgd;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -16,7 +22,7 @@
   content: '';
   position: absolute;
   width: 6px;
-  background-color: white;
+  background-color: $exp-line;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -41,9 +47,9 @@
   /* Make sure that all arrows are pointing leftwards */
     .container::before {
       left: 60px;
-      border: medium solid white;
+      border: medium solid $exp-color;
       border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
+      border-color: transparent $exp-color transparent transparent;
     }
 
   /* Make sure all circles are at the same spot */
