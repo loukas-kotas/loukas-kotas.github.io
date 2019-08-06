@@ -15,6 +15,7 @@ export class DonutChartComponent implements OnInit, AfterViewInit {
   valueMax = 100;
   skill: HTMLElement;
   titleEl: HTMLElement;
+  centerEl: HTMLElement;
   @Input() size;
 
   constructor() { }
@@ -26,6 +27,7 @@ export class DonutChartComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.skill = document.getElementById(this.id);
     this.titleEl = document.getElementById(`title-${this.id}`);
+    this.centerEl = document.getElementById(`center`);
     this.setValueNow();
     this.setProperties();
   }
@@ -42,7 +44,12 @@ export class DonutChartComponent implements OnInit, AfterViewInit {
   }
 
   setSize() {
-    const defaultSize = '200px';
+    const donutSize = 130;
+    const defaultSize = `${donutSize}px`;
+    const ratio = 0.2823529411764706;
+    const textSize = `${donutSize * ratio}px`;
+    const ratioLineHeight = 0.7352941176470589;
+    const lineHeight = `${donutSize * ratioLineHeight}px`;
 
     if ( this.size ) {
       this.skill.style.setProperty('height', this.size);
@@ -52,6 +59,9 @@ export class DonutChartComponent implements OnInit, AfterViewInit {
       this.skill.style.setProperty('height', defaultSize);
       this.skill.style.setProperty('width', defaultSize);
       this.titleEl.style.setProperty('max-width', defaultSize);
+      this.skill.style.setProperty('--percentage-size', lineHeight);
+      this.skill.style.setProperty('--center-text-size', textSize);
+      this.skill.style.setProperty('--skill-strength', `'${this.value}%'`);
     }
 
   }
@@ -72,8 +82,6 @@ export class DonutChartComponent implements OnInit, AfterViewInit {
     } else {
       this.skill.style.setProperty('--background-color', defaultColor);
     }
-    console.log(this.skill.style);
-    console.log(this.skill.style.getPropertyValue('background-color'));
   }
 
 }
