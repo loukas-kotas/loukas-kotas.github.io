@@ -1,5 +1,6 @@
+@import '../../shared/styles/colors';
+
 .card {
-  background: transparent;
   border: none;
 }
 
@@ -9,8 +10,8 @@
   font-weight: 300;
   margin: 0 auto;
   text-align: center;
-  background: white;
-  color: #474e5d;
+  background: $card-bgd;
+  color: $card-text;
 }
 
 .font-settings {
