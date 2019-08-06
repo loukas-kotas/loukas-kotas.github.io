@@ -1,6 +1,9 @@
+@import '../../shared/styles/colors';
 
 .card-body {
   padding: 2rem 1rem;
+  background: $card-bgd;
+  color: $card-text;
 }
 
 .col {
