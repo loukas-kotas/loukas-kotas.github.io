@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, AfterViewInit, AfterContentChecked, AfterViewChecked, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { EventsService } from 'src/shared/services/events.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { EventsService } from 'src/shared/services/events.service';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit, OnDestroy, OnChanges, AfterViewChecked {
+export class SkillsComponent implements OnInit, OnDestroy {
 
   el: HTMLElement;
   showSkills = false;
