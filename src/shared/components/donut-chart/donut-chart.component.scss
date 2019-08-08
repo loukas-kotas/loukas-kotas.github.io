@@ -1,4 +1,7 @@
 @import '../../styles/colors';
+@import '../../styles/animations';
+
+$duration: 5s;
 
 .donut-title {
   // max-width: var(--max-width);
@@ -28,7 +31,11 @@
     stroke-width: 32;
     stroke-dasharray: var(--stroke-dasharray);
     transition: stroke-dasharray 0.5s ease;
+    animation-name: donut-loading;
+    animation-duration: $duration;
+    animation-delay: .2s;
   }
+
 }
 .donut-center{
   // background-color: var(--background-color);
@@ -51,6 +58,8 @@
   text-align: center;
   line-height: var(--percentage-size);
   content: var(--skill-strength);
+  animation-name: donut-title-delay;
+  animation-duration: $duration;
 }
 .ui{
   margin:20px 0;
