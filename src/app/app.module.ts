@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EventsService } from 'src/shared/services/events.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    EventsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
