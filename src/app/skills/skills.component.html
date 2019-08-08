@@ -4,7 +4,7 @@
       <h3>Skills</h3>
     </div>
     <div id="skills-donuts" class="card-body">
-      <div class="row">
+      <div class="row" *ngIf="showSkills" >
         <div class="col">
           <app-donut-chart [id]="'angular'" [value]="100" [title]="'Angular'" [circleColor]="'red'"></app-donut-chart>
         </div>
