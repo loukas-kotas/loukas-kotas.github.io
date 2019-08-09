@@ -6,16 +6,17 @@ $seafoam: #3aeb96;
 
 // cards
 $card-bgd: $bgd-color;
-$card-text: white;
+$card-text: #474e5d;
 $card-title-bgd: $bgd-color;
 $card-title-color: $card-text;
 
 // $exp-color: #474e5d;
 // $exp-timeline-card:#474e5d;
 $exp-color: white;
-$exp-line: $shamrock;
 $exp-timeline-card: white;
-$exp-timeline-card-triangle: #02ab10;
+$exp-timeline-card-triangle: #15d974;
+$exp-line: #15d974;
+$exp-border-top: #15d974;
 $exp-timeline-card-shadow: #000;
 
 $donut-center-bgd: $bgd-color;
