@@ -29,7 +29,8 @@
 
 
 a > span {
-  color: rgba(255, 255, 255, 0.7) !important;
+  // color: rgba(255, 255, 255, 0.7) !important;
+  color: $card-text !important;
 }
 
 a {
