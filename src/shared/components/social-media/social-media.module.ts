@@ -10,7 +10,7 @@ import { SocialMediaComponent } from './social-media.component';
     CommonModule
   ],
   exports: [
-    SocialMediaModule
+    SocialMediaComponent
   ]
 })
 export class SocialMediaModule { }
