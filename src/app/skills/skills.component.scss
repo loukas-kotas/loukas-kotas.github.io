@@ -1,5 +1,9 @@
 @import '../../shared/styles/colors';
 
+.card {
+  border: none;
+}
+
 .card-body {
   padding: 2rem 1rem;
   background: $card-bgd;
