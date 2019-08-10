@@ -10,6 +10,12 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.scrollToTop();
+  }
+
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
   }
 
 }
