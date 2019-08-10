@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonProfileComponent implements OnInit {
 
+  showScrollDownButton = false;
   dataText = ['Loukas Kotas', 'Web Developer', 'Javascript Freak'];
 
   constructor() { }
@@ -14,7 +15,14 @@ export class PersonProfileComponent implements OnInit {
   ngOnInit() {
     console.log('ngoninit');
     this.typewriter();
+    this.activateScrollDownButton();
     document.addEventListener('DOMContentLoaded', this.typewriter);
+  }
+
+  activateScrollDownButton() {
+    setTimeout(() => {
+      this.showScrollDownButton = true;
+    }, 7000);
   }
 
   typewriter = (): void => {
