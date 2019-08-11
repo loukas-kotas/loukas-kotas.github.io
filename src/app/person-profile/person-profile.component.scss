@@ -1,6 +1,10 @@
 @import '../../shared/styles/animations';
 @import '../../shared/styles/colors';
 
+.container-fluid {
+  height: var(--custom-height) !important;
+}
+
 .card {
   background: white !important;
 }
