@@ -13,10 +13,16 @@ export class PersonProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('ngoninit');
+    this.coverFullScreen();
     this.typewriter();
     this.activateScrollDownButton();
     document.addEventListener('DOMContentLoaded', this.typewriter);
+  }
+
+  coverFullScreen() {
+    const el = document.getElementById('container');
+    el.style.setProperty('--custom-height', String(window.innerHeight));
+
   }
 
   activateScrollDownButton() {
@@ -26,7 +32,6 @@ export class PersonProfileComponent implements OnInit {
   }
 
   typewriter = (): void => {
-    console.log('typewriter');
     this.startTextAnimation(1);
     setTimeout(() => {
       this.startTextAnimation(2);
@@ -57,18 +62,12 @@ export class PersonProfileComponent implements OnInit {
     // check if dataText[i] exists
     if (i < this.dataText[i].length) {
       // text exists! start typewriter animation
-    this.typeWriter(this.dataText[i], 0, function(){
-      // after callback (and whole text has been animated), start next text
-      this.StartTextAnimation(i + 1);
-    });
+    this.typeWriter(this.dataText[i], 0, () => { });
     }
 
     if (i < this.dataText[i].length) {
       // text exists! start typewriter animation
-     this.typeWriter(this.dataText[i], 0, function(){
-       // after callback (and whole text has been animated), start next text
-       this.StartTextAnimation(i + 1);
-     });
+     this.typeWriter(this.dataText[i], 0, () => { });
     }
 
   }
