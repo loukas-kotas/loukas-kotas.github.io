@@ -49,7 +49,7 @@ export class PersonProfileComponent implements OnInit {
 
 
   startTextAnimation(i) {
-    if (typeof this.dataText[i] == 'undefined'){
+    if (typeof this.dataText[i] === 'undefined') {
         setTimeout(function() {
           this.StartTextAnimation(0);
         }, 20000);
