@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ngh": "ngh",
-    "deploy": "ng build --prod --base-href https://loukas-kotas.github.io/loukaskotas.com && ngh --dir=dist/"
+    "ngh-set-dir": "ngh --dir=dist",
     "deploy": "ng build --prod --base-href=/loukaskotas.com/ && ngh --dir=dist/loukaskotas.com"
   },
   "private": true,
