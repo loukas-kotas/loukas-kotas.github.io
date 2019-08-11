@@ -35,7 +35,6 @@ export class HeaderComponent implements OnInit {
       this.lastKnownScrollPosition = window.scrollY;
       if (this.lastKnownScrollPosition === 0) {
         this.scrollToTopCounter++;
-        console.log(this.scrollToTopCounter);
       }
       this.rotateIcon();
     });
