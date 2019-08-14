@@ -13,3 +13,29 @@
 .col {
   padding: 1rem 1rem !important;
 }
+
+.skills-budges {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skills-budges--layout {
+  padding: 0 0 2rem 0;
+}
+
+.skill-icon {
+  font-size: 2rem;
+  padding: 0 .5rem;
+}
+
+.subheader {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Saira Extra Condensed',serif;
+  font-size: 1.35rem;
+}
+
+.skills-component {
+  padding: 0 0 0 2em;
+}
