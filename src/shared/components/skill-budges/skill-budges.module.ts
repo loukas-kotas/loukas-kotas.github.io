@@ -8,6 +8,9 @@ import { SkillBudgesComponent } from './skill-budges.component';
   declarations: [SkillBudgesComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    SkillBudgesComponent
   ]
 })
 export class SkillBudgesModule { }
