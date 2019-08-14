@@ -49,9 +49,9 @@ export class PersonProfileComponent implements OnInit {
       document.querySelector('h1').innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true" class="blinking-cursor"></span';
       setTimeout(() => {
         this.typeWriter(text, i + 1, callback);
-      }, (100));
+      }, (50));
     } else if ( typeof callback == 'function') {
-      setTimeout(callback, 700);
+      setTimeout(callback, 100);
     }
   }
 
