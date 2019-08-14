@@ -1,1 +1,11 @@
-<p>skill-budges works!</p>
+<div class="skills-component">
+    <div class="subheader">
+      {{title}}
+    </div>
+    <div class="skills-budges skills-budges--layout">
+      <i *ngFor="let iconTitle of iconTitles" ></i>
+        <ng-container *ngFor="let iconTitle of iconTitles">
+          <i class="devicon-{{iconTitle}}-plain skill-icon"></i>
+        </ng-container>
+    </div>
+  </div>
