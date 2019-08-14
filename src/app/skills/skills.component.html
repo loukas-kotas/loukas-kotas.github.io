@@ -23,10 +23,16 @@
       </div>
     </div>
 
-    <app-skill-budges [title]="'Testing Tools'" [iconTitles]="['jasmine', 'protractor']"></app-skill-budges>
-    <app-skill-budges [title]="'Databases'" [iconTitles]="['postgresql', 'mongodb', 'mysql']"></app-skill-budges>
-    <app-skill-budges [title]="'Operating Systems'" [iconTitles]="['ubuntu', 'apple']"></app-skill-budges>
-    <app-skill-budges [title]="'Other Tools'" [iconTitles]="['bootstrap', 'd3js', 'webpack', 'travis', 'git']"></app-skill-budges>
+    <div class="row">
+      <div class="col">
+        <app-skill-budges [title]="'Testing Tools'" [iconTitles]="['jasmine', 'protractor']"></app-skill-budges>
+        <app-skill-budges [title]="'Other Tools'" [iconTitles]="['bootstrap', 'd3js', 'webpack', 'travis', 'git']"></app-skill-budges>
+      </div>
+      <div class="col">
+        <app-skill-budges [title]="'Databases'" [iconTitles]="['postgresql', 'mongodb', 'mysql']"></app-skill-budges>
+        <app-skill-budges [title]="'Operating Systems'" [iconTitles]="['ubuntu', 'apple']"></app-skill-budges>
+      </div>
+    </div>
 
 
   </div>
