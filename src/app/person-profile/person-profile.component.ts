@@ -28,17 +28,20 @@ export class PersonProfileComponent implements OnInit {
   activateScrollDownButton() {
     setTimeout(() => {
       this.showScrollDownButton = true;
-    }, 7000);
+    }, (this.dataText.length - 1) * 3000);
   }
 
   typewriter = (): void => {
-    this.startTextAnimation(1);
-    setTimeout(() => {
-      this.startTextAnimation(2);
-    }, 3000);
-    setTimeout(() => {
-      this.startTextAnimation(0);
-    }, 6000);
+
+    const len = this.dataText.length - 1;
+    for (let i = 0; i < this.dataText.length; i++) {
+      const element = this.dataText[i];
+      setTimeout(() => {
+        this.startTextAnimation( len - i );
+      }, 3000 * i);
+
+    }
+
   }
 
   typeWriter(text, i, callback) {
