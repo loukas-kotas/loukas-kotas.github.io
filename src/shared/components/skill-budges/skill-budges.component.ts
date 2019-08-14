@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-skill-budges',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill-budges.component.scss']
 })
 export class SkillBudgesComponent implements OnInit {
+
+  @Input() title: string;
+  @Input() iconTitles: string;
 
   constructor() { }
 
