@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PersonProfileComponent implements OnInit {
 
   showScrollDownButton = false;
-  dataText = ['Loukas Kotas', 'Web Developer', 'Javascript Freak'];
+  dataText = ['Loukas Kotas', 'Web Developer', 'Javascript Engineer'];
 
   constructor() { }
 
