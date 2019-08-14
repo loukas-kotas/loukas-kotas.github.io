@@ -9,6 +9,10 @@ $large-devices: 1199.98px;
 
 @media only screen and (max-width: $small-devices) {
 
+  .typewrite {
+    font-size: 3.5rem !important;
+  }
+
 }
 
 @media only screen and (max-width: $medium-devices) {
