@@ -17,3 +17,8 @@
 .font-settings {
   font-family: 'Frank Ruhl Libre', serif;
 }
+
+p::selection {
+  background: $card-text;
+  color: white;
+}
