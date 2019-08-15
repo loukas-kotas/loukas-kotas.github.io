@@ -1,28 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-person-profile',
   templateUrl: './person-profile.component.html',
   styleUrls: ['./person-profile.component.scss']
 })
-export class PersonProfileComponent implements OnInit {
+export class PersonProfileComponent implements OnInit, AfterViewInit {
 
   showScrollDownButton = false;
   dataText = ['Loukas Kotas', 'Web Developer', 'Javascript Engineer'];
-
+  blackBoxHeight = 500; // default value
+  headerHeight = 100; //TODO: get that from configuration
   constructor() { }
 
   ngOnInit() {
-    this.coverFullScreen();
     this.typewriter();
     this.activateScrollDownButton();
     document.addEventListener('DOMContentLoaded', this.typewriter);
   }
 
-  coverFullScreen() {
-    const el = document.getElementById('container');
-    el.style.setProperty('--custom-height', String(window.innerHeight));
+  ngAfterViewInit() {
+    this.coverFullScreen();
+  }
 
+  coverFullScreen() {
+    setTimeout(() => {
+      this.blackBoxHeight = window.innerHeight - this.headerHeight;
+    }, 10);
   }
 
   activateScrollDownButton() {
