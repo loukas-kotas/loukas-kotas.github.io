@@ -32,9 +32,6 @@
   justify-content: start;
 }
 
-.navbar-brand {
-  font-size: 2rem;
-}
 
 
 a > span {
@@ -61,12 +58,6 @@ a:link {
 a:hover {
   margin-bottom: 10px;
   border-bottom: 2px solid green;
-}
-
-.navbar-brand--animation {
-  animation-name: rotation;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
 }
 
 @font-face {
