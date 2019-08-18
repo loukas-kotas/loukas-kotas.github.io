@@ -9,6 +9,7 @@ export class SkillBudgesComponent implements OnInit {
 
   @Input() title: string;
   @Input() iconTitles: string;
+  @Input() tooltipTitles: string;
 
   constructor() { }
 
