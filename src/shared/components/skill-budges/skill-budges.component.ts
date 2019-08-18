@@ -10,11 +10,20 @@ export class SkillBudgesComponent implements OnInit {
   @Input() title: string;
   @Input() iconTitles: string;
   @Input() tooltipTitles: string;
-  @Input() tooltipPosition: string | 'top';
+  @Input() tooltipPosition: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.setDefaultValues();
+  }
+
+  setDefaultValues(): void {
+
+    if ( !this.tooltipPosition ) {
+      this.tooltipPosition = 'top';
+    }
+
   }
 
 }
