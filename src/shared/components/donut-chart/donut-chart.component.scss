@@ -3,10 +3,14 @@
 
 $duration: 5s;
 
-.donut-title {
+.donut-header {
   // max-width: var(--max-width);
   max-width: var(--max-width);
   text-align: center;
+}
+
+.donut-header-title {
+  font-size: 1.4rem;
 }
 
 // ===== SOLUTION 1 ======================================================================================================
@@ -67,7 +71,7 @@ $duration: 5s;
   width:200px;
   .animate-button{
     text-decoration:none;
-    font-family:'Arial', 'Helvettica', san-serif;
+    // font-family:'Arial', 'Helvettica', san-serif;
     font-size:12px;
     color:#fff;
     background:#666;
