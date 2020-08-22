@@ -14,10 +14,19 @@ $card-title-color: $card-text;
 // $exp-timeline-card:#474e5d;
 $exp-color: white;
 $exp-timeline-card: white;
-$exp-timeline-card-triangle: #15d974;
-$exp-line: #15d974;
-$exp-border-top: #15d974;
+$exp-timeline-card-triangle: #59a5d8;
+$exp-line: #59a5d8;
+$exp-border-top: #59a5d8;
+$exp-timeline-circle: #59a5d8;
 $exp-timeline-card-shadow: #000;
 
 $donut-center-bgd: $bgd-color;
 $donut-center-color: $card-text;
+
+
+// donut chart
+$svg-bgd: transparent;
+$circle-bgd: transparent;
+
+// font family
+$fontFamily: 'Montserrat', sans-serif;

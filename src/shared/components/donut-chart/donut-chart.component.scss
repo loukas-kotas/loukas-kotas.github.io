@@ -3,10 +3,14 @@
 
 $duration: 5s;
 
-.donut-title {
+.donut-header {
   // max-width: var(--max-width);
   max-width: var(--max-width);
   text-align: center;
+}
+
+.donut-header-title {
+  font-size: 1.4rem;
 }
 
 // ===== SOLUTION 1 ======================================================================================================
@@ -22,11 +26,11 @@ $duration: 5s;
   svg {
     width: 100%; height: 100%;
     transform: rotate(-90deg);
-    background: #666;
+    background: $svg-bgd;
     border-radius: 50%;
   }
   circle {
-    fill: #666;
+    fill: $circle-bgd;
     stroke: var(--stroke);
     stroke-width: 32;
     stroke-dasharray: var(--stroke-dasharray);
@@ -67,7 +71,7 @@ $duration: 5s;
   width:200px;
   .animate-button{
     text-decoration:none;
-    font-family:'Arial', 'Helvettica', san-serif;
+    // font-family:'Arial', 'Helvettica', san-serif;
     font-size:12px;
     color:#fff;
     background:#666;

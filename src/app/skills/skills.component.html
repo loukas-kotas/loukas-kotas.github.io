@@ -6,31 +6,35 @@
     <div id="skills-donuts" class="card-body">
       <div class="row" *ngIf="showSkills" >
         <div class="col">
-          <app-donut-chart [id]="'angular'" [value]="95" [title]="'Angular'" [circleColor]="'#e74c3c'"></app-donut-chart>
+          <app-donut-chart [id]="'angular'" [value]="95" [title]="'Angular'" [circleColor]="'#03045e'"></app-donut-chart>
         </div>
         <div class="col">
-          <app-donut-chart [id]="'javascript'" [value]="90" [title]="'Javascript'" [circleColor]="'#f1c40f'"></app-donut-chart>
+          <app-donut-chart [id]="'javascript'" [value]="90" [title]="'Javascript'" [circleColor]="'#023e8a'"></app-donut-chart>
         </div>
         <div class="col">
-          <app-donut-chart [id]="'css'" [value]="80" [title]="'CSS'" [circleColor]="'#15D974'"></app-donut-chart>
+          <app-donut-chart [id]="'css'" [value]="80" [title]="'CSS'" [circleColor]="'#0077b6'"></app-donut-chart>
         </div>
         <div class="col">
-          <app-donut-chart [id]="'photoshop'" [value]="70" [title]="'Photoshop'" [circleColor]="'#77c1e7'"></app-donut-chart>
+          <app-donut-chart [id]="'nodejs'" [value]="80" [title]="'Node.js'" [circleColor]="'#0096c7'"></app-donut-chart>
         </div>
         <div class="col">
-          <app-donut-chart [id]="'nodejs'" [value]="80" [title]="'Node.js'" [circleColor]="'#9b59b6'"></app-donut-chart>
+          <app-donut-chart [id]="'photoshop'" [value]="70" [title]="'Photoshop'" [circleColor]="'#00b4d8'"></app-donut-chart>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col col-md-12">
+    <div class="row mt-5">
+      <div class="col">
         <app-skill-budges [title]="'Testing Tools'" [iconTitles]="['jasmine', 'protractor']" [tooltipTitles]="['Jasmine', 'Protractor']"></app-skill-budges>
+      </div>
+      <div class="col">
         <app-skill-budges [title]="'Other Tools'" [iconTitles]="['bootstrap', 'd3js', 'webpack', 'travis', 'git']" [tooltipTitles]="['Bootstrap', 'D3js', 'Webpack', 'Travis', 'Git']"></app-skill-budges>
       </div>
-      <div class="col col-md-12 mr-3">
+      <div class="col">
         <app-skill-budges [title]="'Databases'" [iconTitles]="['postgresql', 'mongodb', 'mysql']" [tooltipTitles]="['PostgreSQL', 'MongoDB', 'MySQL']"></app-skill-budges>
-        <app-skill-budges [title]="'Operating Systems'" [iconTitles]="['ubuntu', 'apple']" [tooltipTitles]="['Ubuntu', 'MacOS']"></app-skill-budges>
+      </div>
+      <div class="col">
+        <app-skill-budges [title]="'OS'" [iconTitles]="['ubuntu', 'apple']" [tooltipTitles]="['Ubuntu', 'MacOS']" [titleClasses]="['pl-4']"></app-skill-budges>
       </div>
     </div>
 
