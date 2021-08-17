@@ -29,7 +29,6 @@ export class SkillBudgesComponent implements OnInit {
   }
 
   titleClasses2String() {
-    console.log(this.titleClasses);
     return this.titleClasses;
     // return this.titleClasses.join(' ');
   }
