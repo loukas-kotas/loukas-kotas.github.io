@@ -1,43 +1,21 @@
 <section id="skills">
   <div class="card card--spacing center">
     <div class="card-title">
-      <h3>Skills</h3>
+      <h3>{{skillsData.title}}</h3>
     </div>
     <div id="skills-donuts" class="card-body">
       <div class="row" *ngIf="showSkills" >
-        <div class="col">
-          <app-donut-chart [id]="'angular'" [value]="95" [title]="'Angular'" [circleColor]="'#03045e'"></app-donut-chart>
-        </div>
-        <div class="col">
-          <app-donut-chart [id]="'javascript'" [value]="90" [title]="'Javascript'" [circleColor]="'#023e8a'"></app-donut-chart>
-        </div>
-        <div class="col">
-          <app-donut-chart [id]="'css'" [value]="80" [title]="'CSS'" [circleColor]="'#0077b6'"></app-donut-chart>
-        </div>
-        <div class="col">
-          <app-donut-chart [id]="'nodejs'" [value]="80" [title]="'Node.js'" [circleColor]="'#0096c7'"></app-donut-chart>
-        </div>
-        <div class="col">
-          <app-donut-chart [id]="'photoshop'" [value]="70" [title]="'Photoshop'" [circleColor]="'#00b4d8'"></app-donut-chart>
+        <div class="col" *ngFor="let skill of skillsData.techs" >
+          <app-donut-chart [id]="skill.id" [value]="skill.value" [title]="skill.title" [circleColor]="skill.circleColor"></app-donut-chart>
         </div>
       </div>
     </div>
 
     <div class="row mt-5">
-      <div class="col">
-        <app-skill-budges [title]="'Testing Tools'" [iconTitles]="['jasmine', 'protractor']" [tooltipTitles]="['Jasmine', 'Protractor']"></app-skill-budges>
-      </div>
-      <div class="col">
-        <app-skill-budges [title]="'Other Tools'" [iconTitles]="['bootstrap', 'd3js', 'webpack', 'travis', 'git']" [tooltipTitles]="['Bootstrap', 'D3js', 'Webpack', 'Travis', 'Git']"></app-skill-budges>
-      </div>
-      <div class="col">
-        <app-skill-budges [title]="'Databases'" [iconTitles]="['postgresql', 'mongodb', 'mysql']" [tooltipTitles]="['PostgreSQL', 'MongoDB', 'MySQL']"></app-skill-budges>
-      </div>
-      <div class="col">
-        <app-skill-budges [title]="'OS'" [iconTitles]="['ubuntu', 'apple']" [tooltipTitles]="['Ubuntu', 'MacOS']" [titleClasses]="['pl-4']"></app-skill-budges>
+      <div class="col" *ngFor="let badge of badges" >
+        <app-skill-budges [title]="badge.title" [iconTitles]="badge.iconTitles" [tooltipTitles]="badge.tooltipTitles"></app-skill-budges>
       </div>
     </div>
-
 
   </div>
 </section>

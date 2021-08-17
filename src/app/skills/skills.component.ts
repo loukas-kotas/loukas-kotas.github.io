@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Badge, configData, Skills, } from 'src/configuration';
 import { EventsService } from 'src/shared/services/events.service';
 
 @Component({
@@ -7,6 +8,9 @@ import { EventsService } from 'src/shared/services/events.service';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit, OnDestroy {
+
+  skillsData: Skills = configData.skills;
+  badges: Badge[] = configData.badges;
 
   el: HTMLElement;
   showSkills = false;
