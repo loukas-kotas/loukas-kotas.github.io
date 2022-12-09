@@ -49,7 +49,13 @@ export const configData: ConfigData = {
     title: 'Experience',
     companies: [
     {
-      duration: 'July 2021 - Now',
+      duration: 'July 2022 - Now',
+      title: 'Betsson Group',
+      subtitle: 'Software Engineer',
+      side: Side.left,
+    },
+    {
+      duration: 'July 2021 - July 2022',
       title: 'Benefit Software',
       subtitle: 'Web Front End Developer',
       side: Side.right,
