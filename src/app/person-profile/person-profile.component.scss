@@ -1,97 +1,72 @@
 @import '../../shared/styles/animations';
 @import '../../shared/styles/colors';
 
-.container-fluid {
-  height: var(--custom-height) !important;
-}
-
-.card {
-  background: white !important;
-}
-
-.profile-image {
-  width: 300px;
-  height: 346px;
-  background: lightblue;
-}
-
-.profile-info {
-}
-
-.subtitle {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.1;
-  margin-bottom: 0;
-}
-
-.profile-list {
-  padding: 3rem 0 0 0;
-}
-
-.profile-list  .title {
-  display: block;
-  width: 120px;
-  float: left;
-  color: #333333;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.profile-list  .cont {
-  display: block;
-  margin-left: 125px;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #9da0a7;
-}
-
-.profile-list > li {
-  padding: 10px 0 0 0;
-}
-
-
-.black-box {
-  position: relative;
-  background: white;
-  width: 100%;
-  height: 560px;
-}
-
-
-h1 {
-  font-size: 5rem;
-  color: black;
-  text-transform: uppercase;
-  animation: blinkTextCursor 500ms steps(40) infinite normal;
-}
-
-@keyframes blinkTextCursor {
-  from {
-        border-right-color: rgba(255, 255, 255, 0.75);
+.person-profile-container {
+  display: flex;
+  align-content: center;
+  height: 100vh;
+  flex-direction: column;
+  font-size: 6vw;
+  z-index: 1;
+  .center {
+    align-self: center;
   }
-  to {
-        border-right-color: transparent;
+
+  .typewriter {
+    display: block;
+    letter-spacing: 0.3rem;
+    align-self: center;
+  }
+
+  .scroll-down {
+    position: fixed;
+    bottom: 20px;
   }
 }
 
 
-.black-box h1 {
-  padding-top: 11rem;
-  margin-left: 5%;
-}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .person-profile-container {
+    font-size: 9vw;
 
-span {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-}
-
-@keyframes caret {
-  50% {
-    border-color: transparent;
+    .typewriter {
+      padding-top: 12rem;
+      max-width: 100vw;
+    }
   }
 }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .person-profile-container {
+    font-size: 11vw;
 
+    .typewriter {
+      padding-top: 9rem;
+    }
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .person-profile-container {
+    font-size: 6vw;
+
+    .typewriter {
+      padding-top: 6rem;
+    }
+  }
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .person-profile-container {
+    font-size: 6vw;
+
+    .typewriter {
+      padding-top: 6rem;
+    }
+  }
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}
