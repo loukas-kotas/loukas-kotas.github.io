@@ -41,44 +41,6 @@ interface ConfigData {
   badges: Badge[];
 }
 
-const baseColor = "#FA5B3C";
-
-const colorShades = [
-  baseColor, // Base color
-  shadeColor(baseColor, -20), // Slightly darker shade
-  shadeColor(baseColor, -40), // Even darker shade
-  shadeColor(baseColor, 20), // Slightly lighter shade
-  shadeColor(baseColor, 40), // Even lighter shade
-];
-
-function shadeColor(color, percent) {
-  var usePound = false;
-
-  if (color[0] == "#") {
-    color = color.slice(1);
-    usePound = true;
-  }
-
-  var num = parseInt(color, 16);
-
-  var r = (num >> 16) + percent;
-
-  if (r > 255) r = 255;
-  else if (r < 0) r = 0;
-
-  var b = ((num >> 8) & 0x00ff) + percent;
-
-  if (b > 255) b = 255;
-  else if (b < 0) b = 0;
-
-  var g = (num & 0x0000ff) + percent;
-
-  if (g > 255) g = 255;
-  else if (g < 0) g = 0;
-
-  return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
-}
-
 export const isScrollDownVisible = false;
 
 export const configData: ConfigData = {
@@ -141,31 +103,31 @@ export const configData: ConfigData = {
         id: "angular",
         value: 95,
         title: "Angular",
-        circleColor: colorShades[0],
+        circleColor: "#fa5b3c",
       },
       {
         id: "javascript",
         value: 90,
         title: "Javascript",
-        circleColor: colorShades[1], // Slightly darker shade
+        circleColor: "#fa6b4f",
       },
       {
         id: "css",
         value: 80,
         title: "CSS",
-        circleColor: colorShades[2], // Even darker shade
+        circleColor: "#fb7b62"
       },
       {
         id: "nodejs",
         value: 80,
         title: "Node.js",
-        circleColor: colorShades[3], // Slightly lighter shade
+        circleColor: "#fb8c76",
       },
       {
         id: "photoshop",
         value: 70,
         title: "Photoshop",
-        circleColor: colorShades[4], // Even lighter shade
+        circleColor: "#fc9c8a"
       },
     ],
   },
