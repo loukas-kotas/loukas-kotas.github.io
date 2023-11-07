@@ -4,4 +4,4 @@ deploy:
   local_dir: dist
   keep-history: true
   on:
-    branch: dev
+    branch: main
