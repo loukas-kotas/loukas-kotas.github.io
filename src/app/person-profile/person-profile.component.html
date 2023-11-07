@@ -1,7 +1,7 @@
 
 <div class="person-profile-container">
   <app-blink-typewriter class="center typewriter" [phrases]="dataText" [options]="{startAfter: 1000}" (typewritingCompleted)="onTypewritingCompleted()"></app-blink-typewriter>
-  <div *ngIf="showScrollDownButton" class="center scroll-down">
+  <div *ngIf="isScrollDownVisible && showScrollDownButton" class="center scroll-down">
     <app-scroll-down-mouse></app-scroll-down-mouse>
   </div>
 </div>
