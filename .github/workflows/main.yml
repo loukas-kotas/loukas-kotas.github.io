@@ -40,6 +40,12 @@ jobs:
       - name: Build Angular app
         run: npm run prod
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          name: docs
+          path: ./docs
+
   # Single deploy job since we're just deploying
   deploy:
     needs: build
