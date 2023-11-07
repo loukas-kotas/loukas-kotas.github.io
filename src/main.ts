@@ -8,6 +8,10 @@ if (environment.production) {
   enableProdMode();
 }
 
+if ('serviceWorker' in navigator && environment.production) {
+  navigator.serviceWorker.register('./ngsw-worker.json');
+}
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
