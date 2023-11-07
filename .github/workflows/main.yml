@@ -25,17 +25,11 @@ jobs:
     - name: Build Angular app
       run: npm run prod
 
-    # - name: Deploy to GitHub Pages
-    #   run: |
-    #     if [ $GITHUB_REF = 'refs/heads/main' ]; then
-    #       git config --global user.email "actions@github.com"
-    #       git config --global user.name "GitHub Actions"
-    #       git checkout main
-    #       git pull
-    #       mv dist/* .
-    #       git add .
-    #       git commit -m "Deploy from GitHub Actions"
-    #       git push
-    #     fi
+    - name: Trigger "pages-build-deployment" workflow
+      uses: actions/workflow-dispatch@v2
+      with:
+        workflow: pages-build-deployment
+        token: ${{ secrets.GITHUB_TOKEN }}
+
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
