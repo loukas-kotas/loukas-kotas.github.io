@@ -103,31 +103,31 @@ export const configData: ConfigData = {
         id: "angular",
         value: 95,
         title: "Angular",
-        circleColor: "#fa5b3c",
+        circleColor: "#fb8872",
       },
       {
         id: "javascript",
         value: 90,
         title: "Javascript",
-        circleColor: "#fa6b4f",
+        circleColor: "#fc9581",
       },
       {
         id: "css",
         value: 80,
         title: "CSS",
-        circleColor: "#fb7b62"
+        circleColor: "#fca391"
       },
       {
         id: "nodejs",
         value: 80,
         title: "Node.js",
-        circleColor: "#fb8c76",
+        circleColor: "#fdb0a1",
       },
       {
         id: "photoshop",
         value: 70,
         title: "Photoshop",
-        circleColor: "#fc9c8a"
+        circleColor: "#fdbdb1"
       },
     ],
   },
