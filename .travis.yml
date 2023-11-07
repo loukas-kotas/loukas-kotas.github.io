@@ -1,7 +1,7 @@
 deploy:
   provider: pages
   github_token: $GITHUB_TOKEN
-  local_dir: docs
+  local_dir: dist
   keep-history: true
   on:
     branch: dev
