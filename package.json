@@ -1,6 +1,10 @@
 {
   "name": "loukaskotas",
   "version": "0.0.0",
+  "engines": {
+    "node": "18.15.0",
+    "npm": "9.8.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
