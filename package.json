@@ -14,8 +14,8 @@
     "e2e": "ng e2e",
     "ngh": "ngh",
     "ngh-set-dir": "ngh --dir=dist",
-    "deploy-gh-pages": "ng build --prod --base-href=/ && ngh --dir=dist",
-    "deploy": "ng deploy --repo=https://github.com/loukas-kotas/loukas-kotas.github.io.git --name='loukas-kotas' --email=loukas.kotas@gmail.com --cname=loukaskotas.com --branch=master"
+    "deploy-gh-pages": "npm run ng build --prod --base-href=/ && ngh --dir=dist",
+    "deploy": "npm run ng deploy --repo=https://github.com/loukas-kotas/loukas-kotas.github.io.git --name='loukas-kotas' --email=loukas.kotas@gmail.com --cname=loukaskotas.com --branch=master"
   },
   "private": true,
   "dependencies": {
