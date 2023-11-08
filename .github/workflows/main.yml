@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: docs
-          path: ./docs
+          path: docs
 
   # Deploy to GitHub Pages job
   deploy:
@@ -63,15 +63,11 @@ jobs:
         with:
           name: docs
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./docs
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_name: docs
-          timeout: 600000
-          error_count: 10
-          reporting_interval: 5000
-          preview: false
-        env:
-          GITHUB_PAGES: true
