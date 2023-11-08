@@ -46,7 +46,7 @@ export const isScrollDownVisible = false;
 export const configData: ConfigData = {
   about: {
     description:
-      'Loukas is an ambitious and interested graduate EECE student with discipline and accountability involved into open-source projects, Volunteering activities and a lot of code. His motto is "Gain through Experiencing" and he applies that in his every-day life and work. His personal development comes through perseverance and avoidance of superficial knowledge. The meaning of true success comes from his team’s welfare. Using critical and organizing mind, his concise and impeccable thoughts produce succinct and cater solutions. His next goal is to overcome the novice level and become an expert in his field of interest.',
+      'Loukas is a highly motivated and dedicated graduate student in Electrical and Computer Engineering. He actively engages in open-source projects, volunteer work, and demonstrates a strong passion for coding. His guiding principle is "Learning through Experience," which he consistently applies to both his daily life and professional endeavors. Loukas places great emphasis on personal growth, achieved through unwavering perseverance and a commitment to gaining in-depth knowledge rather than superficial insights. He measures the true meaning of success by the well-being and success of his team. His approach is characterized by critical thinking and exceptional organizational skills, enabling him to deliver concise and impeccable solutions. Currently, he is exploring new avenues for both architectural and managerial roles within his field, striving to gain expertise and make a significant impact. ',
   },
   experience: {
     title: "Experience",
@@ -115,7 +115,7 @@ export const configData: ConfigData = {
         id: "css",
         value: 80,
         title: "CSS",
-        circleColor: "#fca391"
+        circleColor: "#fca391",
       },
       {
         id: "nodejs",
@@ -127,7 +127,7 @@ export const configData: ConfigData = {
         id: "photoshop",
         value: 70,
         title: "Photoshop",
-        circleColor: "#fdbdb1"
+        circleColor: "#fdbdb1",
       },
     ],
   },
