@@ -41,7 +41,7 @@ jobs:
       - name: Archive Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: docs
+          name: deliverable
           path: docs
 
   # Deploy to GitHub Pages job
@@ -61,12 +61,12 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
-          name: docs
+          name: deliverable
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./docs
+          path: "./docs"
 
       - name: Deploy to GitHub Pages
         id: deployment
