@@ -36,7 +36,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Angular app
-        run: yarn prod
+        run: yarn ng build --configuration production --base-href "/" --output-path=dist/browser
 
       - name: List files in dist/browser (debug)
         run: |
