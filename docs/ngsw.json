@@ -1,0 +1,107 @@
+{
+  "configVersion": 1,
+  "timestamp": 1699481391537,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/986.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.js",
+        "/manifest.webmanifest",
+        "/polyfills.js",
+        "/runtime.js",
+        "/styles.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/fa-brands-400.svg",
+        "/fa-brands-400.ttf",
+        "/fa-brands-400.woff",
+        "/fa-brands-400.woff2",
+        "/fa-regular-400.svg",
+        "/fa-regular-400.ttf",
+        "/fa-regular-400.woff",
+        "/fa-regular-400.woff2",
+        "/fa-solid-900.svg",
+        "/fa-solid-900.ttf",
+        "/fa-solid-900.woff",
+        "/fa-solid-900.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/986.js": "398fabe751830b90bd80dbf9b6e59cc0cf047d02",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/fa-brands-400.svg": "872ee3b3c4fc4966fc91b3a02acee22310785c80",
+    "/fa-brands-400.ttf": "90c59b2279d655d553087d6792db3463dde2eac0",
+    "/fa-brands-400.woff": "e83708376def8e0aeb05a73efb5e02fd9357d2e9",
+    "/fa-brands-400.woff2": "e09582d0902429bc13219db2977e94f5a3803ea8",
+    "/fa-regular-400.svg": "a53964e932e93cabc0ea724ee04fbbba0e8cecc0",
+    "/fa-regular-400.ttf": "deeef1fa1c3845ef4c4b5e4a92288644a16dcefc",
+    "/fa-regular-400.woff": "5ccae24e97fc82adcbc93c1f9b4810c1a159dbdc",
+    "/fa-regular-400.woff2": "9cd2abb4e9dce5fb3f54182ed06216c82ce76019",
+    "/fa-solid-900.svg": "cde1b7601cadfacd4ffdb3ce6401140e52f04aac",
+    "/fa-solid-900.ttf": "039cf738167d8e45ed93b60f82669070cda64c4d",
+    "/fa-solid-900.woff": "08aaf0da257b570ffcccf454a91a83d243294170",
+    "/fa-solid-900.woff2": "1793dd7561aca64d9751506879d919ade7efe325",
+    "/favicon.ico": "1eb32f3ee1a1636240ce39614e43bb09b1c2b404",
+    "/index.html": "8485efff48d3e7af7a2e414e686395365f950e35",
+    "/main.js": "e0078c89097f5585d10635406a49d8005150ca02",
+    "/manifest.webmanifest": "cc06e58b143858acbd456919283eda88bd2eb56c",
+    "/polyfills.js": "44ecb7f8d22edbc41efa2b8a516163eee9ab6ebc",
+    "/runtime.js": "c787cf97a80fc0999aab6284a1b8f3a7ba528d95",
+    "/styles.css": "ab528e407e0708a0460c75dd0489204989129fc3"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

@@ -3,9 +3,10 @@ import { Badge, configData, Skills, } from 'src/configuration';
 import { EventsService } from 'src/shared/services/events.service';
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+    selector: 'app-skills',
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.scss'],
+    standalone: false
 })
 export class SkillsComponent implements OnInit, OnDestroy {
 

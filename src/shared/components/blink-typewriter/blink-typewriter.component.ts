@@ -4,24 +4,27 @@ import {
   EventEmitter,
   Input,
   Output,
+  OnDestroy,
 } from "@angular/core";
-import { timer, of, concat, } from "rxjs";
+import { timer, of, concat, Subscription } from "rxjs";
 import { map, tap, concatMap, take, finalize, delay } from 'rxjs/operators';
 import { TypewriterOptions } from "src/shared/models/typewriter-options.model";
 
 
 @Component({
-  selector: "app-blink-typewriter",
-  templateUrl: "./blink-typewriter.component.html",
-  styleUrls: ["./blink-typewriter.component.scss"],
+    selector: "app-blink-typewriter",
+    templateUrl: "./blink-typewriter.component.html",
+    styleUrls: ["./blink-typewriter.component.scss"],
+    standalone: false
 })
-export class BlinkTypewriterComponent implements AfterViewInit {
+export class BlinkTypewriterComponent implements AfterViewInit, OnDestroy {
   @Input() phrases!: string[];
   @Input() options: TypewriterOptions;
   @Output() typewritingCompleted = new EventEmitter<any>();
 
   displayedText = "";
   counter = 0;
+  private subscription: Subscription;
 
   constructor() {}
 
@@ -66,7 +69,7 @@ export class BlinkTypewriterComponent implements AfterViewInit {
       const typewritedPhrase$ = this.typewritePhrase(phrase, options);
       phrases$.push(typewritedPhrase$);
     }
-    concat(...phrases$)
+    this.subscription = concat(...phrases$)
       .pipe(
         concatMap(val => {
           return of(val);
@@ -77,6 +80,12 @@ export class BlinkTypewriterComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.typeWritePhrases(this.phrases, this.options);
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
 }

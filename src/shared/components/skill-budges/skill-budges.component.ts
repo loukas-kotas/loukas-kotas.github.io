@@ -1,16 +1,17 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-skill-budges',
-  templateUrl: './skill-budges.component.html',
-  styleUrls: ['./skill-budges.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-skill-budges',
+    templateUrl: './skill-budges.component.html',
+    styleUrls: ['./skill-budges.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class SkillBudgesComponent implements OnInit {
 
   @Input() title: string;
-  @Input() iconTitles: string;
-  @Input() tooltipTitles: string;
+  @Input() iconTitles: string[];
+  @Input() tooltipTitles: string[];
   @Input() tooltipPosition: string;
   @Input() titleClasses: string[] = [' ', ''];
 
@@ -29,8 +30,7 @@ export class SkillBudgesComponent implements OnInit {
   }
 
   titleClasses2String() {
-    return this.titleClasses;
-    // return this.titleClasses.join(' ');
+    return this.titleClasses.join(' ');
   }
 
 }

@@ -15,6 +15,7 @@ export class EventsService {
    * @source https://gist.github.com/jjmu15/8646226
    */
   isInViewport(element) {
+    if (!element) return false;
     const rect = element.getBoundingClientRect();
     const html = document.documentElement;
     return (

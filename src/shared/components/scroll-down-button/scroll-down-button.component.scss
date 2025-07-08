@@ -1,5 +1,5 @@
-@import '../../styles/colors';
-@import '../../styles/media';
+@use '../../styles/colors' as *;
+@use '../../styles/media' as *;
 // scroll source: https://codepen.io/nxworld/pen/OyRrGy
 .demo a {
   position: relative;

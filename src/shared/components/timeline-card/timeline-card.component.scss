@@ -1,4 +1,4 @@
-@import '../../styles/colors';
+@use '../../styles/colors' as *;
 
 .content-title > h2 {
   font-size: 1.5rem;

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DonutChartComponent } from './donut-chart.component';
 import { Component, Input } from '@angular/core';
@@ -9,8 +9,9 @@ describe('DonutChartComponent', () => {
 
   @Component({
     selector: 'app-test-donut-chart',
-    template: `<app-donut-chart [id]="1"></app-donut-chart>`
-  }) class TestDonutChartComponent extends DonutChartComponent {
+    template: `<app-donut-chart [id]="1"></app-donut-chart>`,
+    standalone: false
+}) class TestDonutChartComponent extends DonutChartComponent {
     constructor() {
       super();
       this.id = '1';
@@ -23,7 +24,7 @@ describe('DonutChartComponent', () => {
 
 
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DonutChartComponent, TestDonutChartComponent ]
     })
