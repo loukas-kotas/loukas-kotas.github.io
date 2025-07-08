@@ -38,11 +38,16 @@ jobs:
       - name: Build Angular app
         run: yarn prod
 
+      - name: List files in docs (debug)
+        run: |
+          echo "Listing files in ./docs after build:"
+          ls -l ./docs
+
       - name: Archive Artifact
         uses: actions/upload-artifact@v4
         with:
           name: deliverable
-          path: docs
+          path: ./docs
 
   # Deploy to GitHub Pages job
   deploy:
@@ -63,10 +68,15 @@ jobs:
         with:
           name: deliverable
 
+      - name: List files in docs (debug)
+        run: |
+          echo "Listing files in ./docs after artifact download:"
+          ls -l ./docs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./docs"
+          path: ./docs
 
       - name: Deploy to GitHub Pages
         id: deployment
