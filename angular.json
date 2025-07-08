@@ -18,9 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "aot": true,
-            "outputPath": {
-              "base": "docs"
-            },
+            "outputPath": "dist",
             "index": "src/index.html",
             "polyfills": [
               "src/polyfills.ts"
