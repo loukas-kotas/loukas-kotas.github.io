@@ -52,7 +52,13 @@ export const configData: ConfigData = {
     title: "Experience",
     companies: [
       {
-        duration: "July 2022 - Now",
+        duration: "February 2024 - Now",
+        title: "KLDiscovery",
+        subtitle: "Senior Software Engineer",
+        side: Side.right,
+      },
+      {
+        duration: "July 2022 - February 2024",
         title: "Betsson Group",
         subtitle: "Software Engineer",
         side: Side.left,

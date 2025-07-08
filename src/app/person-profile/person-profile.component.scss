@@ -1,5 +1,5 @@
-@import '../../shared/styles/animations';
-@import '../../shared/styles/colors';
+@use '../../shared/styles/animations' as *;
+@use '../../shared/styles/colors' as *;
 
 .person-profile-container {
   display: flex;

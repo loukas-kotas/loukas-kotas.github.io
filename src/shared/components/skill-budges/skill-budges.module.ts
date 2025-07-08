@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SkillBudgesComponent } from './skill-budges.component';
-import { TooltipModule } from 'ngx-bootstrap/tooltip/';
-
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 
 @NgModule({

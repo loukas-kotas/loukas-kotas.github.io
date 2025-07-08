@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-timeline-card',
-  templateUrl: './timeline-card.component.html',
-  styleUrls: ['./timeline-card.component.scss']
+    selector: 'app-timeline-card',
+    templateUrl: './timeline-card.component.html',
+    styleUrls: ['./timeline-card.component.scss'],
+    standalone: false
 })
 export class TimelineCardComponent implements OnInit {
 

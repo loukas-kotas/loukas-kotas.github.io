@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import './shared//styles/colors';
-@import './shared//styles/media';
+@use './shared/styles/colors' as *;
+@use './shared/styles/media' as *;
 
 // colors
 // $bgd-color: lightgrey;

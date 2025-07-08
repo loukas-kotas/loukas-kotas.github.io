@@ -1,5 +1,5 @@
-@import '../../shared/styles/colors';
-@import '../../shared/styles/animations';
+@use '../../shared/styles/colors' as *;
+@use '../../shared/styles/animations' as *;
 
 .light {
   background: $bgd-color;

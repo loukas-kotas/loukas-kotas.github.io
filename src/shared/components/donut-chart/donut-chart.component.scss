@@ -1,5 +1,6 @@
-@import '../../styles/colors';
-@import '../../styles/animations';
+@use '../../styles/colors' as *;
+@use '../../styles/animations' as *;
+@use 'sass:math';
 
 $duration: 5s;
 
@@ -124,7 +125,7 @@ $duration: 5s;
 
   $color2: $color;
   $base2: $base;
-	$deg: ($perc/100*360)+deg;
+	$deg: (math.div($perc, 100)*360)+deg;
 	$deg1: 90deg;
 	$deg2: $deg;
 
@@ -133,7 +134,7 @@ $duration: 5s;
 		$base: $color;
     $color: $base2;
     $color2: $base2;
-    $deg1: ($perc/100*360+90)+deg;
+    $deg1: (math.div($perc, 100)*360+90)+deg;
 		$deg2: 0deg;
 	}
 
@@ -145,14 +146,14 @@ $duration: 5s;
 
       .slice {
         &.one {
-          clip: rect(0 $size $size/2 0);
+          clip: rect(0 $size math.div($size, 2) 0);
           -webkit-transform: rotate($deg1);
           transform: rotate($deg1);
           background: $color;
         }
 
         &.two {
-          clip: rect(0 $size/2 $size 0);
+          clip: rect(0 math.div($size, 2) $size 0);
           -webkit-transform: rotate($deg2);
           transform: rotate($deg2);
           background: $color2;

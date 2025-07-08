@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import * as config from './../../configuration';
 @Component({
-  selector: 'app-person-profile',
-  templateUrl: './person-profile.component.html',
-  styleUrls: ['./person-profile.component.scss']
+    selector: 'app-person-profile',
+    templateUrl: './person-profile.component.html',
+    styleUrls: ['./person-profile.component.scss'],
+    standalone: false
 })
 export class PersonProfileComponent {
 

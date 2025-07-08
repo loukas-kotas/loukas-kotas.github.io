@@ -1,22 +1,23 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-donut-chart',
-  templateUrl: './donut-chart.component.html',
-  styleUrls: ['./donut-chart.component.scss']
+    selector: 'app-donut-chart',
+    templateUrl: './donut-chart.component.html',
+    styleUrls: ['./donut-chart.component.scss'],
+    standalone: false
 })
 export class DonutChartComponent implements OnInit, AfterViewInit {
 
-  @Input() value;
-  @Input() id;
-  @Input() title;
-  @Input() circleColor;
-  @Input() circleBgdColor;
+  @Input() value: number;
+  @Input() id: string;
+  @Input() title: string;
+  @Input() circleColor: string;
+  @Input() circleBgdColor: string;
   valueMax = 100;
   skill: HTMLElement;
   titleEl: HTMLElement;
   centerEl: HTMLElement;
-  @Input() size;
+  @Input() size: number;
 
   constructor() { }
 
@@ -52,9 +53,9 @@ export class DonutChartComponent implements OnInit, AfterViewInit {
     const lineHeight = `${donutSize * ratioLineHeight}px`;
 
     if ( this.size ) {
-      this.skill.style.setProperty('height', this.size);
-      this.skill.style.setProperty('width', this.size);
-      this.titleEl.style.setProperty('max-width', this.size);
+      this.skill.style.setProperty('height', this.size.toString());
+      this.skill.style.setProperty('width', this.size.toString());
+      this.titleEl.style.setProperty('max-width', this.size.toString());
     } else {
       this.skill.style.setProperty('height', defaultSize);
       this.skill.style.setProperty('width', defaultSize);
