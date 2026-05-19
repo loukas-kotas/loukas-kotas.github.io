@@ -1,72 +1,98 @@
-@use '../../shared/styles/animations' as *;
-@use '../../shared/styles/colors' as *;
+// =============================================================================
+// Hero / Person Profile — Premium Landing Section
+// =============================================================================
+
+@use '../../shared/styles/media' as *;
 
 .person-profile-container {
   display: flex;
-  align-content: center;
-  height: 100vh;
   flex-direction: column;
-  font-size: 6vw;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--header-height) - 8px);
+  position: relative;
   z-index: 1;
-  .center {
-    align-self: center;
+  overflow: hidden;
+
+  // Subtle radial gradient for depth
+  // background:
+  //   radial-gradient(ellipse 80% 50% at 50% -20%, var(--color-accent-muted), transparent),
+  //   var(--color-bg);
+}
+
+// ─── tsParticles canvas (absolute, behind content) ──────────────────────────
+
+.particles-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto; // allow hover interactions on the canvas
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 var(--space-6);
+  animation: fadeIn 1s ease-out both;
+  position: relative;
+  z-index: 1;
+}
+
+.typewriter {
+  display: block;
+  font-size: var(--text-hero);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.15rem;
+  line-height: var(--leading-tight);
+}
+
+.hero-subtitle {
+  margin-top: var(--space-6);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--tracking-wide);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 2.5s forwards;
+}
+
+.scroll-down-indicator {
+  position: absolute;
+  bottom: var(--space-10);
+  animation: fadeIn 0.6s ease-out 3s both;
+  z-index: 1;
+}
+
+// ─── Responsive ─────────────────────────────────────────────────────────────
+
+@media only screen and (max-width: $mobile) {
+  .person-profile-container {
+    min-height: calc(100vh - var(--header-height));
   }
 
   .typewriter {
-    display: block;
-    letter-spacing: 0.3rem;
-    align-self: center;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    padding: 0 var(--space-4);
   }
 
-  .scroll-down {
-    position: fixed;
-    bottom: 20px;
+  .hero-subtitle {
+    font-size: var(--text-base);
+    padding: 0 var(--space-4);
+  }
+}
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+  .typewriter {
+    font-size: clamp(2.5rem, 7vw, 4rem);
   }
 }
 
+// ─── Respect reduced-motion preference ──────────────────────────────────────
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .person-profile-container {
-    font-size: 9vw;
-
-    .typewriter {
-      padding-top: 12rem;
-      max-width: 100vw;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .particles-canvas {
+    display: none;
   }
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .person-profile-container {
-    font-size: 11vw;
-
-    .typewriter {
-      padding-top: 9rem;
-    }
-  }
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .person-profile-container {
-    font-size: 6vw;
-
-    .typewriter {
-      padding-top: 6rem;
-    }
-  }
-
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .person-profile-container {
-    font-size: 6vw;
-
-    .typewriter {
-      padding-top: 6rem;
-    }
-  }
-
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {...}

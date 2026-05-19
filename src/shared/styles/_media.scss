@@ -1,29 +1,40 @@
+// =============================================================================
+// Media Queries — Responsive Breakpoints
+// =============================================================================
+
+$mobile:  640px;
+$tablet:  768px;
+$laptop:  1024px;
+$desktop: 1280px;
+
+// Legacy aliases (backward compat with existing components)
 $extra-small-devices: 575.98px;
-$small-devices: 768.98px;
-$medium-devices: 991.98px;
-$large-devices: 1199.98px;
+$small-devices:       768.98px;
+$medium-devices:      991.98px;
+$large-devices:       1199.98px;
 
-@media only screen and (max-width: $extra-small-devices) {
+// ─── Global responsive overrides ────────────────────────────────────────────
 
-}
-
-@media only screen and (max-width: $small-devices) {
-
+@media only screen and (max-width: $mobile) {
   .typewrite {
-    font-size: 3.5rem !important;
+    font-size: 3rem !important;
   }
 
   .icon-bar {
-    top: 65% !important;
+    top: auto !important;
+    bottom: 0;
+    right: 0 !important;
+    left: 0;
+    transform: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: var(--z-fixed);
   }
-
 }
 
-@media only screen and (max-width: $medium-devices) {
-
+@media only screen and (max-width: $small-devices) {
+  .typewrite {
+    font-size: 3.5rem !important;
+  }
 }
-
-@media only screen and (max-width: $large-devices) {
-
-}
-

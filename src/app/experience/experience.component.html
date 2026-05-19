@@ -1,14 +1,10 @@
-<!-- source: https://www.w3schools.com/howto/howto_css_timeline.asp -->
 <section id="experience">
-    <div class="card card--spacing card--no-border center">
-      <div class="card-title">
-        <h3>{{experience.title}}</h3>
-      </div>
-      <div class="card-body">
-          <div class="timeline" *ngFor="let company of experience.companies" >
-                <app-timeline-card [duration]="company.duration" [title]="company.title" [subtitle]="company.subtitle" [side]="company.side"></app-timeline-card>
-          </div>
+  <div class="experience-container center">
+    <h3 class="section-title">{{experience.title}}</h3>
+    <div class="timeline-wrapper">
+      <div class="timeline" *ngFor="let company of experience.companies">
+        <app-timeline-card [duration]="company.duration" [title]="company.title" [subtitle]="company.subtitle" [side]="company.side"></app-timeline-card>
       </div>
     </div>
+  </div>
 </section>
-

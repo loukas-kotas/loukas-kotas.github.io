@@ -1,0 +1,147 @@
+// =============================================================================
+// Design System — CSS Custom Properties
+// =============================================================================
+// Single source of truth for all design tokens.
+// Enables dark mode via [data-theme="dark"] on <html>.
+// =============================================================================
+
+:root {
+  // ─── Color Tokens ─────────────────────────────────────────────────────
+  --color-bg:              #fafafa;
+  --color-surface:         #ffffff;
+  --color-surface-2:       #f5f5f7;
+  --color-surface-elevated:#ffffff;
+
+  --color-text-primary:    #1a1a2e;
+  --color-text-secondary:  #6b7280;
+  --color-text-tertiary:   #9ca3af;
+
+  --color-accent:          #f97066;
+  --color-accent-hover:    #ef4444;
+  --color-accent-subtle:   #fef2f2;
+  --color-accent-muted:    rgba(249, 112, 102, 0.12);
+
+  --color-border:          #e5e7eb;
+  --color-border-subtle:   #f3f4f6;
+
+  --color-shadow:          rgba(0, 0, 0, 0.06);
+  --color-shadow-md:       rgba(0, 0, 0, 0.08);
+  --color-shadow-lg:       rgba(0, 0, 0, 0.12);
+
+  --color-selection-bg:    var(--color-accent);
+  --color-selection-text:  #ffffff;
+
+  // Glassmorphism
+  --glass-bg:              rgba(255, 255, 255, 0.82);
+  --glass-border:          rgba(255, 255, 255, 0.18);
+
+  // ─── Typography Tokens ────────────────────────────────────────────────
+  --font-family:           'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:             'JetBrains Mono', 'Fira Code', monospace;
+
+  --font-weight-light:     300;
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+
+  --text-xs:               0.75rem;
+  --text-sm:               0.875rem;
+  --text-base:             1rem;
+  --text-lg:               1.125rem;
+  --text-xl:               1.25rem;
+  --text-2xl:              1.5rem;
+  --text-3xl:              1.875rem;
+  --text-4xl:              2.25rem;
+  --text-5xl:              3rem;
+  --text-hero:             clamp(4rem, 5.5vw, 4.5rem);
+
+  --leading-tight:         1.15;
+  --leading-snug:          1.35;
+  --leading-normal:        1.5;
+  --leading-relaxed:       1.75;
+  --leading-loose:         2;
+
+  --tracking-tight:        -0.02em;
+  --tracking-normal:       0;
+  --tracking-wide:         0.05em;
+  --tracking-wider:        0.1em;
+  --tracking-widest:       0.15em;
+
+  // ─── Spacing Tokens (8px base grid) ───────────────────────────────────
+  --space-0:               0;
+  --space-1:               0.25rem;   // 4px
+  --space-2:               0.5rem;    // 8px
+  --space-3:               0.75rem;   // 12px
+  --space-4:               1rem;      // 16px
+  --space-5:               1.25rem;   // 20px
+  --space-6:               1.5rem;    // 24px
+  --space-8:               2rem;      // 32px
+  --space-10:              2.5rem;    // 40px
+  --space-12:              3rem;      // 48px
+  --space-16:              4rem;      // 64px
+  --space-20:              5rem;      // 80px
+  --space-24:              6rem;      // 96px
+  --space-section:         clamp(4rem, 8vw, 7rem);
+
+  // ─── Layout Tokens ────────────────────────────────────────────────────
+  --max-width:             1100px;
+  --max-width-content:     850px;
+  --max-width-narrow:      560px;
+  --header-height:         64px;
+
+  // ─── Border Radius Tokens ─────────────────────────────────────────────
+  --radius-sm:             4px;
+  --radius-md:             8px;
+  --radius-lg:             12px;
+  --radius-xl:             16px;
+  --radius-2xl:            24px;
+  --radius-full:           9999px;
+
+  // ─── Transition Tokens ────────────────────────────────────────────────
+  --transition-fast:       150ms ease;
+  --transition-base:       200ms ease;
+  --transition-slow:       300ms ease;
+  --transition-slower:     500ms ease;
+
+  // ─── Z-Index Scale ────────────────────────────────────────────────────
+  --z-base:                0;
+  --z-above:               1;
+  --z-dropdown:            10;
+  --z-sticky:              20;
+  --z-fixed:               30;
+  --z-overlay:             40;
+  --z-modal:               50;
+}
+
+// =============================================================================
+// Dark Mode Overrides
+// =============================================================================
+[data-theme="dark"] {
+  --color-bg:              #0a0a0b;
+  --color-surface:         #141416;
+  --color-surface-2:       #1c1c1f;
+  --color-surface-elevated:#1e1e22;
+
+  --color-text-primary:    #e8e8ed;
+  --color-text-secondary:  #9ca3af;
+  --color-text-tertiary:   #6b7280;
+
+  --color-accent:          #fb8872;
+  --color-accent-hover:    #f97066;
+  --color-accent-subtle:   #2d1b1b;
+  --color-accent-muted:    rgba(251, 136, 114, 0.15);
+
+  --color-border:          #2a2a2e;
+  --color-border-subtle:   #1f1f23;
+
+  --color-shadow:          rgba(0, 0, 0, 0.2);
+  --color-shadow-md:       rgba(0, 0, 0, 0.3);
+  --color-shadow-lg:       rgba(0, 0, 0, 0.4);
+
+  --color-selection-bg:    var(--color-accent);
+  --color-selection-text:  #0a0a0b;
+
+  --glass-bg:              rgba(20, 20, 22, 0.82);
+  --glass-border:          rgba(255, 255, 255, 0.06);
+}
