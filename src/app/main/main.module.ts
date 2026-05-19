@@ -7,6 +7,7 @@ import { PersonProfileModule } from '../person-profile/person-profile.module';
 import { AboutModule } from '../about/about.module';
 import { SkillsModule } from '../skills/skills.module';
 import { ExperienceModule } from '../experience/experience.module';
+import { FooterModule } from '../footer/footer.module';
 import { SocialMediaModule } from 'src/shared/components/social-media/social-media.module';
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
     AboutModule,
     SkillsModule,
     ExperienceModule,
+    FooterModule,
     SocialMediaModule,
     RouterModule.forChild(routes)
   ],

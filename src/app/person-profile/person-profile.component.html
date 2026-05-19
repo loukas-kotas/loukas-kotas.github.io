@@ -1,7 +1,17 @@
 
 <div class="person-profile-container">
-  <app-blink-typewriter class="center typewriter" [phrases]="dataText" [options]="{startAfter: 1000}" (typewritingCompleted)="onTypewritingCompleted()"></app-blink-typewriter>
-  <div *ngIf="isScrollDownVisible && showScrollDownButton" class="center scroll-down">
+  <ngx-particles
+    *ngIf="showParticles"
+    [id]="id"
+    [options]="particlesOptions"
+    (particlesLoaded)="particlesLoaded($event)"
+    class="particles-canvas"
+  ></ngx-particles>
+  <div class="hero-content">
+    <app-blink-typewriter class="typewriter" [phrases]="dataText" [options]="{startAfter: 1000}" (typewritingCompleted)="onTypewritingCompleted()"></app-blink-typewriter>
+    <p class="hero-subtitle">Building modern, scalable web experiences</p>
+  </div>
+  <div *ngIf="isScrollDownVisible && showScrollDownButton" class="scroll-down-indicator">
     <app-scroll-down-mouse></app-scroll-down-mouse>
   </div>
 </div>

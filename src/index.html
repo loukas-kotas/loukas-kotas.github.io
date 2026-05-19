@@ -2,28 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Loukas Kotas - Front End Engineer</title>
+  <title>Loukas Kotas — Senior Software Engineer</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <meta name="description" content="Loukas Kotas — Senior Software Engineer specializing in frontend architecture, Angular, and modern web development.">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" id="dynamic-favicon">
 
-  <!-- Font family -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&amp;display=swap" rel="stylesheet">
+  <!-- Devicon (updated CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-152787124-1"></script>
+  <!-- Font family: Montserrat with expanded weight range -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152787124-1"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-152787124-1');
   </script>
 
+  <!-- Dark mode: apply saved preference before paint to avoid flash -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      var favicon = document.getElementById('dynamic-favicon');
+      // Default to dark mode when no preference is saved
+      if (theme === 'light') {
+        document.documentElement.removeAttribute('data-theme');
+        favicon.href = 'favicon.ico?' + new Date().getTime();
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        favicon.href = 'favicon-dark.ico?' + new Date().getTime();
+      }
+    })();
+  </script>
+
   <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#1976d2">
 </head>
 <body>
   <app-root></app-root>

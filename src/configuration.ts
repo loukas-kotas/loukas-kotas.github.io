@@ -139,14 +139,19 @@ export const configData: ConfigData = {
   },
   badges: [
     {
+      title: "Core Skills",
+      iconTitles: ["angularjs", "javascript", "css3", "nodejs", "nestjs"],
+      tooltipTitles: ["Angular", "Javascript", "CSS", "Node.js", "NestJS"],
+    },
+    {
       title: "Testing Tools",
-      iconTitles: ["jasmine", "protractor"],
-      tooltipTitles: ["Jasmine", "Protractor"],
+      iconTitles: ["jasmine", "jest", "karma", "playwright", "protractor"],
+      tooltipTitles: ["Jasmine", "Jest", "Karma", "Playwright", "Protractor"],
     },
     {
       title: "Other Tools",
-      iconTitles: ["bootstrap", "d3js", "webpack", "travis", "git"],
-      tooltipTitles: ["Bootstrap", "D3js", "Webpack", "Travis", "Git"],
+      iconTitles: ["bootstrap", "d3js", "webpack", "travis", "git", "photoshop"],
+      tooltipTitles: ["Bootstrap", "D3js", "Webpack", "Travis", "Git", "Photoshop"],
     },
     {
       title: "Databases",

@@ -1,41 +1,36 @@
-@use '../../shared/styles/colors' as *;
+// =============================================================================
+// Skills Section — Refined Layout
+// =============================================================================
 
-.card {
-  border: none;
+@use '../../shared/styles/media' as *;
+
+.skills-container {
+  max-width: var(--max-width);
 }
 
-.card-body {
-  padding: 2rem 1rem;
-  background: $card-bgd;
-  color: $card-text;
+// ─── Badges Grid ────────────────────────────────────────────────────────────
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  padding: var(--space-4) 0;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
 }
 
-.col {
-  padding: 1rem 1rem !important;
-}
-
-.skills-budges {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.skills-budges--layout {
-  padding: 0 0 2rem 0;
-}
-
-.skill-icon {
-  font-size: 2rem;
-  padding: 0 .5rem;
-}
-
-.subheader {
-  text-transform: uppercase;
-  font-weight: 500;
-  // font-family: 'Saira Extra Condensed',serif;
-  font-size: 1.35rem;
-}
-
-.skills-component {
-  padding: 0 0 0 2em;
+.badge-group {
+  padding: var(--space-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: background var(--transition-slow), border-color var(--transition-slow);
 }

@@ -1,12 +1,47 @@
-<nav class="navbar navbar-expand-lg navbar-light navbar--positioning light fixed-top">
-  <!-- <a class="navbar-brand" href="#">Home</a> -->
-  <!-- <i class="fas fa-star ÷navbar-brand"></i> -->
-  <a href="#"><img src="../../favicon.ico" alt="" class="header-brand"></a>
-  <div class="nav" id="nav">
-    <ul class="header-container clearfix">
-      <li><a href="#about"><span>About</span></a></li>
-      <li><a href="#skills"><span>Skills</span></a></li>
-      <li><a href="#experience"><span>Experience</span></a></li>
+<nav class="header-nav fixed-top" [class.header-nav--scrolled]="isScrolled">
+  <div class="header-inner">
+    <a href="#" class="header-brand-link">
+      <img [src]="isDarkMode ? '../../favicon-dark.ico' : '../../favicon.ico'" alt="LK" class="header-brand">
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="header-links">
+      <li>
+        <a href="#about" [class.active]="activeSection === 'about'">
+          <span>About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#skills" [class.active]="activeSection === 'skills'">
+          <span>Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="#experience" [class.active]="activeSection === 'experience'">
+          <span>Experience</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Theme toggle -->
+    <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+      <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+    </button>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-toggle" (click)="toggleMobileMenu()" [attr.aria-label]="'Toggle menu'" [class.is-open]="mobileMenuOpen">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" [class.mobile-menu--open]="mobileMenuOpen">
+    <ul class="mobile-links">
+      <li><a href="#about" (click)="closeMobileMenu()"><span>About</span></a></li>
+      <li><a href="#skills" (click)="closeMobileMenu()"><span>Skills</span></a></li>
+      <li><a href="#experience" (click)="closeMobileMenu()"><span>Experience</span></a></li>
     </ul>
   </div>
 </nav>

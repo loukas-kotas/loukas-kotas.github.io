@@ -3,9 +3,8 @@
       {{title}}
     </div>
     <div class="skills-budges skills-budges--layout">
-      <i *ngFor="let iconTitle of iconTitles" ></i>
-        <ng-container *ngFor="let iconTitle of iconTitles let i = index">
-          <i class="devicon-{{iconTitle}}-plain skill-icon" [attr.data-index]="i" tooltip="{{tooltipTitles[i]}}" placement="{{tooltipPosition}}"></i>
-        </ng-container>
+      <ng-container *ngFor="let iconTitle of iconTitles let i = index">
+        <i class="devicon-{{iconTitle}}-plain skill-icon" [attr.data-index]="i" tooltip="{{tooltipTitles[i]}}" placement="{{tooltipPosition}}"></i>
+      </ng-container>
     </div>
   </div>

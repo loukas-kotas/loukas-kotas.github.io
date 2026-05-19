@@ -1,3 +1,7 @@
+// =============================================================================
+// Blink Typewriter — Styled for Design System
+// =============================================================================
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -12,14 +16,12 @@
 
 .blink {
   animation: blink 1s infinite;
+  color: var(--color-accent);
 }
 
 .typewriter-container {
-  color: #000;
+  color: var(--color-text-primary);
   text-transform: uppercase;
-  padding: 40px 20px;
+  padding: var(--space-8) var(--space-4);
   width: 100%;
-  // display: inline;
 }
-
-
